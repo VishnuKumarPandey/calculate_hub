@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CalculatE_HUB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>> CalculatE_HUB</h1>
+
+    <div class="nav">
+        <button onclick="nav('home')">HOME</button>
+        <button onclick="nav('bmi')">BMI</button>
+        <button onclick="nav('emi')">EMI</button>
+        <button onclick="nav('shop')">SHOP</button>
+        <button onclick="nav('age')">AGE</button>
+        <button onclick="nav('pass')">SECURE</button>
+        <button onclick="nav('grade')">GPA</button>
+        <button onclick="nav('math')">MATH</button>
+    </div>
+
+    <div class="layout">
+        <div class="side">
+            <marquee class="m up" direction="up" scrollamount="3">
+                <p>^#^#!*^*#!!*^*#!<br>.^#!^#!*^*#!*^*#!<br>^#!*^*^#!*^*#!#!&<br>^#!*^#!*^*#!^*#!
+                    <p>^#^#!*^*#!!*^*#!<br>.^#!^#!*^*#!*^*#!<br>^#!*^*^#!*^*#!#!&<br>^#!*^#!*^*#!^*#!<br>.^#!*^*#!<br>&^#^#!*^*#!!*^*#!<br>^^#!*^*#!<br>^#!*^^#!*^*#!*#!.<br>^#!*^*#!&</p><br>.^#!*^*#!<br>&^#^#!*^*#!!*^*#!<br>^^#!*^*#!<br>^#!*^^#!*^*#!*#!.<br>^#!*^*#!&</p>
+            </marquee>
+
+            <marquee class="m down" direction="down" scrollamount="4">
+                <p>^#^#!*^*#!!*^*#!<br>.^#!^#!*^*#!*^*#!<br>^#!*^*^#!*^*#!#!&
+                    <p>^#^#!*^*#!!*^*#!<br>.^#!^#!*^*#!*^*#!<br>^#!*^*^#!*^*#!#!&<br>^#!*^#!*^*#!^*#!<br>.^#!*^*#!<br>&^#^#!*^*#!!*^*#!<br>^^#!*^*#!<br>^#!*^^#!*^*#!*#!.<br>^#!*^*#!&</p><br>^#!*^#!*^*#!^*#!<br>.^#!*^*#!<br>&^#^#!*^*#!!*^*#!<br>^^#!*<p>^#^#!*^*#!!*^*#!<br>.^#!^#!*^*#!*^*#!<br>^#!*^*^#!*^*#!#!&<br>^#!*^#!*^*#!^*#!<br>.^#!*^*#!<br>&^#^#!*^*#!!*^*#!<br>^^#!*^*#!<br>^#!*^^#!*^*#!*#!.<br>^#!*^*#!&</p>^*#!<br>^#!*^^#!*^*#!*#!.<br>^#!*^*#!&</p>
+            </marquee>
+        </div>
+        <div class="box">
+            <div id="home" class="screen">
+                <h2>SYSTEM_READY...</h2>
+                <p>SELECT MODULE ABOVE.</p>
+            </div>
+
+            <div id="bmi" class="screen hide">
+                <h2>> BMI_MOD</h2>
+                <input id="b-w" placeholder="Weight (kg)">
+                <input id="b-h" placeholder="Height (cm)">
+                <button onclick="bmi()">RUN</button>
+                <h3 id="r-bmi"></h3>
+            </div>
+
+            <div id="emi" class="screen hide">
+                <h2>> EMI_MOD</h2>
+                <input id="e-p" placeholder="Loan Amt">
+                <input id="e-r" placeholder="Rate %">
+                <input id="e-t" placeholder="Years">
+                <button onclick="emi()">RUN</button>
+                <h3 id="r-emi"></h3>
+            </div>
+
+            <div id="shop" class="screen hide">
+                <h2>> SHOP_MOD</h2>
+                <input id="s-p" placeholder="Price">
+                <input id="s-d" placeholder="Disc %">
+                <input id="s-t" placeholder="Tax %">
+                <button onclick="shop()">RUN</button>
+                <h3 id="r-shop"></h3>
+            </div>
+
+            <div id="age" class="screen hide">
+                <h2>> AGE_MOD</h2>
+                <input type="date" id="a-d">
+                <button onclick="age()">RUN</button>
+                <h3 id="r-age"></h3>
+            </div>
+
+            <div id="pass" class="screen hide">
+                <h2>> SECURE_MOD</h2>
+                <input id="p-i" placeholder="Password">
+                <button onclick="pass()">CHECK</button>
+                <h3 id="r-pass"></h3>
+            </div>
+
+            <div id="grade" class="screen hide">
+                <h2>> GPA_MOD</h2>
+                <div class="row"><input id="g1" placeholder="M1"><input id="t1" placeholder="/ Total"></div>
+                <div class="row"><input id="g2" placeholder="M2"><input id="t2" placeholder="/ Total"></div>
+                <div class="row"><input id="g3" placeholder="M3"><input id="t3" placeholder="/ Total"></div>
+                <div class="row"><input id="g4" placeholder="M4"><input id="t4" placeholder="/ Total"></div>
+                <div class="row"><input id="g5" placeholder="M5"><input id="t5" placeholder="/ Total"></div>
+                <button onclick="gpa()">CALC</button>
+                <h3 id="r-gpa"></h3>
+            </div>
+
+            <div id="math" class="screen hide">
+                <h2>> MATH_CORE</h2>
+                <input id="m1" placeholder="Num 1">
+                <input id="m2" placeholder="Num 2">
+                <br>
+                <button class="sm" onclick="math('+')">+</button>
+                <button class="sm" onclick="math('-')">-</button>
+                <button class="sm" onclick="math('*')">x</button>
+                <button class="sm" onclick="math('/')">/</button>
+                <h3 id="r-math"></h3>
+            </div>
+        </div>
+
+        <div class="side">
+            <marquee id="mar-r" direction="down" scrollamount="5" height="100%">
+                <p id="txt-r">> LOG_ENTRY_014<br>> STATUS: ACTIVE<br>> MEMORY: STABLE</p>
+            </marquee>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
